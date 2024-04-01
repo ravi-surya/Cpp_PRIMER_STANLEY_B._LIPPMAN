@@ -108,3 +108,49 @@ the statements in the same line.
 
 *****************************************************************************
 
+Ex 1.7
+-Compile a program that has incorrectly nested comments
+
+-sol:
+/*
+* comment pairs /* */  cannot nest.
+* ‘‘cannot nest’’ is considered source code,
+* as is the rest of the program
+*/
+int main()
+{
+return 0;
+}
+
+
+ERROR:
+
+unkk.cpp:4:3: error: extended character Γs not valid in an identifier
+    4 | * ΓmΓannot nestΓs considered source code,
+      |   ^
+junkk.cpp:4:3: error: extended character Γs not valid in an identifier
+junkk.cpp:4:12: error: extended character Γs not valid in an identifier
+    4 | * Γannot nestΓs considered source code,
+      |            ^
+junkk.cpp:4:12: error: extended character Γs not valid in an identifier
+junkk.cpp:3:23: error: 'cannot' does not name a type
+    3 | * comment pairs /* */ cannot nest.
+      |                       ^~~~~~
+
+*******************************************************************************
+
+Ex 1.8
+-Indicate which, if any, of the following output statements are legal:
+    std::cout << "/*";
+    std::cout << "*/";
+    std::cout << /* "*/" */;
+    std::cout << /* "*/" /* "/*" */;
+    After you’ve predicted what will happen, test your answers by compiling a program
+    with each of these statements. Correct any errors you encounter.
+
+-sol:
+
+first statement output : /*
+second statement output : */
+third statement output : error as there is " missing
+fourth statement output : /*
