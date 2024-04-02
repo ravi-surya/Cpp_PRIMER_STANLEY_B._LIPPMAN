@@ -10,7 +10,8 @@ Ex 1.1
 -Review the documentation for your compiler and determine what file
 naming convention it uses. Compile and run the main program from page 2.
 
--sol:
+SOLUTION:
+
 first compile code 
 	g++ FILE_NAME.cpp -o YOUR_PROGRAM_NAME
 
@@ -26,7 +27,7 @@ Ex 1.2
 as an indicator that the program failed. Recompile and rerun your program to see how
 your system treats a failure indicator from main.
 
--sol: 
+SOLUTION: 
 
 No Change ,it runs as USUAL , apparently it doesn't influence the program only
 might indicate an error state to the operating system.
@@ -36,7 +37,7 @@ might indicate an error state to the operating system.
 Ex 1.3 
 -Write a program to print Hello, World on the standard output.
 
--sol:
+SOLUTION:
 
     #include <iostream>
     int main()
@@ -51,7 +52,7 @@ Ex 1.4
 -Our program used the addition operator, +, to add two numbers. Write
 a program that uses the multiplication operator, *, to print the product instead.
 
--sol:
+SOLUTION:
 
     #include <iostream>
     int main()
@@ -70,7 +71,7 @@ Ex 1.5
 -We wrote the output in one large statement. Rewrite the program to use
 a separate statement to print each operand.
 
--sol:
+SOLUTION:
 
     #include <iostream>
     int main()
@@ -98,7 +99,7 @@ Ex 1.6
     If the program is legal, what does it do? If the program is not legal, why not? How
     would you fix it?
     
--sol:
+SOLUTION:
 
 its not legal in the sense of its missing "std:cout" before the << output 
 operator,if we are using multiple statements to write it.
@@ -111,7 +112,8 @@ the statements in the same line.
 Ex 1.7
 -Compile a program that has incorrectly nested comments
 
--sol:
+SOLUTION:
+
 /*
 * comment pairs /* */  cannot nest.
 * ‘‘cannot nest’’ is considered source code,
@@ -148,9 +150,110 @@ Ex 1.8
     After you’ve predicted what will happen, test your answers by compiling a program
     with each of these statements. Correct any errors you encounter.
 
--sol:
+SOLUTION:
 
 first statement output : /*
 second statement output : */
 third statement output : error as there is " missing
 fourth statement output : /*
+
+*********************************************************************************
+
+Ex 1.9
+-Write a program that uses a while to sum the numbers from 50 to 100
+
+SOLUTION:
+
+#include <iostream>
+
+int main()
+{
+int val=50;
+int sum=0;
+
+while(val<=100)
+{
+    sum+=val;
+    ++val;
+}
+
+std::cout<<"the sum from 50 to 100 is " <<sum;
+    return 0;
+}
+
+OUTPUT:
+
+the sum from 50 to 100 is 3825
+
+*******************************************************************************
+
+Ex 1.10
+-In addition to the ++ operator that adds 1 to its operand, there is a
+ decrement operator (--) that subtracts 1. Use the decrement operator to write a while
+ that prints the numbers from ten down to zero
+
+SOLUTION:
+
+#include <iostream>
+
+int main()
+{
+int val=10;
+
+while(val>=0)
+{
+   std::cout<< val<<"" ; 
+   --val;
+}
+
+return 0;
+}
+
+OUTPUT:
+
+10 9 8 7 6 5 4 3 2 1 0 
+
+***********************************************************************************
+
+Ex 1.11
+-Write a program that prompts the user for two integers. Print each
+ number in the range specified by those two integers
+
+SOLUTION:
+
+#include <iostream>
+
+int main()
+{
+int val,val1;
+std::cout<<"enter two numbers ";
+std::cin>>val>>val1;
+
+if(val>val1)
+{
+    while(val1<=val)
+    {
+        std::cout<<val1<<" ";
+        val1++;
+    }
+}
+else{
+     while(val1>=val)
+    {
+        std::cout<<val<<" ";
+        val++;
+    }
+}
+
+return 0;
+}
+
+
+OUTPUT:
+
+enter two numbers 1
+10
+1 2 3 4 5 6 7 8 9 10 
+
+*************************************************************************************
+Ex 1.12
