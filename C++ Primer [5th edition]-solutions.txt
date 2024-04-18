@@ -355,7 +355,47 @@ Ex 1.15
 
 SOLUTION:
 
+-The types of errors with their programs:
+    
+    SYNTAX ERROR - [grammatical error(of the programming language not spoken)]
+    ex-
+        int main()
+        {
+            std;;cout<<"hello world"; 
+            // wrong colon used in 'ostream'
 
-**********************************************************************************
+            std::cout<<"hello world"
+            //no semicolon
+        }
+
+    TYPE ERROR - [passing or using the wrong TYPE of data to any ITEM OF DATA]
+    ex-
+        int main()
+        {
+            int var =0;
+            var= "hello ";
+        }
+
+    DECLARATION ERROR - [every name must be declared before it is used]
+    ex-
+        #include <iostream>
+        int main()
+        {
+            int v1 = 0, v2 = 0;
+            std::cin >> v >> v2; // error: uses "v" not "v1" misspelling name of identifier
+            // error: cout not defined; should be std::cout
+            cout << v1 + v2 << std::endl;
+            return 0;
+        }
 
 
+******************************************************************************************
+
+Ex 1.16
+
+-Write your own version of a program that prints the sum of a set of
+ integers read from cin
+
+SOLUTION:
+
+-

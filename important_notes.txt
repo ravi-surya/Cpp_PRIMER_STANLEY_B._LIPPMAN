@@ -1,0 +1,26 @@
+------we can have an 'istream' as a condition in a while loop, the 
+  istream is valid if the 'stream' has not encountered any problem or error then 
+  the test succeeds.
+  if the stream encounters an error like the value is INVALID or if we hit end-of-file,
+  then the while loop terminates.
+
+  ex:   #include <iostream>
+        int main()
+        {
+            int sum = 0, value = 0;
+            // read until end-of-file, calculating a running total of all values read
+            while (std::cin >> value)
+                /*std::cin >> value
+                That expression reads the next number from the standard input and stores that
+                number in value. The input operator >> returns its left operand, which
+                in this case is std::cin. This condition, therefore, tests std::cin
+                */
+                sum += value; // equivalent to sum = sum + value
+            std::cout << "Sum is: " << sum << std::endl;
+            return 0;
+        } 
+
+
+------in windows the 'end-of-file' is 'ctrl + z'
+
+------ edit-compile-debug  - good technique
