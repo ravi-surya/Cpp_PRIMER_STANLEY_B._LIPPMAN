@@ -1,6 +1,12 @@
 #include <iostream>
 int main()
-        {
-            int var =0;
-            var= "hello ";
-        }
+{
+     int sum=0;
+     for(int i=0;std::cin>>i;)
+     {
+          sum+=i;
+
+     }
+     std::cout<<sum;
+}
+   
