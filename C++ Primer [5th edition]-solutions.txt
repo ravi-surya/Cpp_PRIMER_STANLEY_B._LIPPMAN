@@ -221,6 +221,33 @@ Ex 1.11
 
 SOLUTION:
 
+-two solutions one with if-else statements the other without it.
+#include <iostream>
+
+int main()
+{
+int val,val1;
+std::cout<<"enter two numbers ";
+std::cin>>val>>val1;
+
+
+    while(val1<val)
+    {
+        std::cout<<val1<<" ";
+        val1++;
+    }
+
+
+     while(val1>=val )
+    {
+        std::cout<<val<<" ";
+        val++;
+    }
+
+
+return 0;
+}
+///////////////////////////////////////////////////////////////
 #include <iostream>
 
 int main()
@@ -412,4 +439,102 @@ SOLUTION:
 
 ***********************************************************************************************
 
-Ex 
+Ex 1.17
+
+-What happens in the program presented in this section if the input values are all equal? 
+ What if there are no duplicated values?
+
+SOLUTION:
+
+-   The cnt variable keeps incrementing, that is the while loop goes on forever , and keeps asking 
+    for the user input.
+
+-   If there are no duplicate input values then it prints the input value that was inputed
+    before the latest input value and mentions the amount of times it was printed,(or in other
+    words it prints out the cnt variable)
+
+-   example:
+    5
+    5
+    5
+    5
+    5
+    5
+    55
+    5 occurs 6 times
+    5
+    55 occurs 1 times
+    
+
+*****************************************************************************************************
+
+Ex 1.18:
+
+-Compile and run the program from this section giving it only equal
+ values as input. Run it again giving it values in which no number is repeated.
+
+SOLUTION:
+
+-   5
+    5
+    5
+    555
+    5 occurs 4 times
+    66
+    555 occurs 1 times
+    77
+    66 occurs 1 times
+    88
+    77 occurs 1 times
+    99
+    88 occurs 1 times
+    123
+    99 occurs 1 times
+    654
+    123 occurs 1 times
+
+    //first i only inputed with equal values that is 5
+    //then i inputed all different numbers.
+
+*********************************************************************************************
+
+Ex 1.19
+
+-Revise the program you wrote for the exercises in § 1.4.1 (p. 13) that
+ printed a range of numbers so that it handles input in which the first number is smaller
+ than the second.
+
+SOLUTION:
+
+-   #include <iostream>
+
+    int main()
+    {
+    int val,val1;
+    std::cout<<"enter two numbers ";
+    std::cin>>val>>val1;
+
+    if(val>val1)
+    {
+        while(val1<=val)
+        {
+            std::cout<<val1<<" ";
+            val1++;
+        }
+    }
+    else{
+        while(val1>=val)
+        {
+            std::cout<<val<<" ";
+            val++;
+        }
+    }
+
+    return 0;
+    }
+
+**************************************************************************************
+
+Ex 1.20
+
+-

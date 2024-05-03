@@ -1,12 +1,25 @@
 #include <iostream>
+
 int main()
 {
-     int sum=0;
-     for(int i=0;std::cin>>i;)
-     {
-          sum+=i;
+int val,val1;
+std::cout<<"enter two numbers ";
+std::cin>>val>>val1;
 
-     }
-     std::cout<<sum;
+
+    while(val1<val)
+    {
+        std::cout<<val1<<" ";
+        val1++;
+    }
+
+
+     while(val1>=val )
+    {
+        std::cout<<val<<" ";
+        val++;
+    }
+
+
+return 0;
 }
-   
