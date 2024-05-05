@@ -1,25 +1,10 @@
 #include <iostream>
-
+#include "Sales_item.h"
 int main()
 {
-int val,val1;
-std::cout<<"enter two numbers ";
-std::cin>>val>>val1;
-
-
-    while(val1<val)
-    {
-        std::cout<<val1<<" ";
-        val1++;
-    }
-
-
-     while(val1>=val )
-    {
-        std::cout<<val<<" ";
-        val++;
-    }
-
-
+Sales_item item1, item2;
+std::cin >> item1 >> item2; // read a pair of transactions
+std::cout << item1 + item2 << std::endl; // print their sum
 return 0;
+
 }

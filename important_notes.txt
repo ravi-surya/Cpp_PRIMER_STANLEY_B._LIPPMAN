@@ -24,3 +24,14 @@
 ------in windows the 'end-of-file' is 'ctrl + z'
 
 ------ edit-compile-debug  - good technique
+
+------in c++ we define a data structure by defining a class. class defines A TYPE along with A
+        collection of operations that are related to that TYPE.
+
+------ to use a class we need to know three things:
+        -what is its name?
+        -where is it definied?
+        -what operations does it support?
+
+
+
