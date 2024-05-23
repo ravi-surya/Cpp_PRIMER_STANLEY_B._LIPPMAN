@@ -537,4 +537,258 @@ SOLUTION:
 
 Ex 1.20
 
+-http://www.informit.com/title/0321714113 contains a copy
+ of Sales_item.h in the Chapter 1 code directory. Copy that file to your working
+ directory. Use it to write a program that reads a set of book sales transactions, writing
+ each transaction to the standard output.
+
+SOLUTION:
+
+-   #include <iostream>
+    #include "Sales_item.h"
+    int main()
+    {
+    Sales_item item1;
+    while(std::cin >> item1 ) // read a transactions
+    {
+        std::cout << item1 << std::endl; 
+    }
+    return 0;
+    }
+
+-OUTPUT:
+    24-5-1-x 3 20
+    24-5-1-x 3 60 20
+    24-7-3-x 5 60
+    24-7-3-x 5 300 60    
+
+******************************************************************************************
+
+Ex 1.21
+
+- Write a program that reads two Sales_item objects that have the
+  same ISBN and produces their sum.
+
+SOLUTION:
+
+-   #include <iostream>
+    #include "Sales_item.h"
+    int main()
+    {
+    Sales_item item1,item2;
+    std::cin >> item1>>item2; // read a transactions
+    if(item1.isbn()==item2.isbn())
+        std::cout << item1+item2 << std::endl;
+    else
+        std::cout<<"isbn not equal";
+
+    return 0;
+
+    }
+
+-OUTPUT:
+    for equal isbn:
+
+    24-1-x 3 20
+    24-1-x 4 20
+    24-1-x 7 140 20
+
+    for unequal isbn:
+
+    24-1-x 3 20
+    24-2-x 3 202
+    isbn not equal
+
+*******************************************************************************************
+
+Ex 1.22 *
+
+-Write a program that reads several transactions for the same ISBN.
+ Write the sum of all the transactions that were read
+
+SOLUTION:
+
+-   #include <iostream>
+    #include "Sales_item.h"
+    int main()
+    {
+        Sales_item item,item1;
+    
+        if(std::cin>>item)//input the first Sales_item object
+        {
+            int count =1;// have counter initialized to 1
+            while(std::cin>>item1)//input the second Sales_item object
+            {
+                if(item.isbn()== item1.isbn())
+                //check if the isbn for both are matching,if yes increament the count and add the two objects
+                {
+                    count++;
+                    item+=item1;
+
+                }
+                else{
+                //else     
+                    std::cout<<item.isbn()<<" is the isbn and the number of transaction for this isbn is "<< count<<std::endl;
+                    std::cout<<item<<std::endl;
+                    item = item1;
+                    count=1;
+                }
+            }
+        }   
+    return 0;
+
+    }
+
+-OUTPUT:
+
+    24-x 3 20
+    24-x 4 50
+    24-x 3 80
+    24-x 5 60
+    24-x 2 70
+    24-y 7 20
+    24-x is the isbn and the number of transaction for this isbn is 5
+    24-x 17 940 55.2941
+    24-z 7 90
+    24-y is the isbn and the number of transaction for this isbn is 1
+    24-y 7 140 20
+    24-z 3 20
+    24-z 1 10
+    24-x 4 10
+    24-z is the isbn and the number of transaction for this isbn is 3
+    24-z 11 700 63.6364
+
+
+******************************************************************************************
+
+Ex 
+
 -
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
+
+Ex 
+
+-
+
+SOLUTION:
+
+-
+
+
+******************************************************************************************
