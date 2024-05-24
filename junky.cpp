@@ -13,13 +13,12 @@ int main()
             //check if the isbn for both are matching,if yes increament the count and add the two objects
             {
                 count++;
-                item+=item1;
-
+                
             }
             else{
             //else     
-                std::cout<<item.isbn()<<" is the isbn and the number of transaction for this isbn is "<< count<<std::endl;
-                std::cout<<item<<std::endl;
+                std::cout<<item1<<" occured "<< count<<" times "<<std::endl;
+                
                 item = item1;
                 count=1;
             }

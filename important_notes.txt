@@ -33,5 +33,14 @@
         -where is it definied?
         -what operations does it support?
 
+------ member functions or methods are functions defined in a class and is accessed by an 
+        object of that class, by a DOT "." operator.
+        TO CALL A MEMBER FUNCTION BY THE DOT OPERATOR WE USE () brackets 
+        ex: item.isbn() to call the function isbn() we use () brackets, THAT MAY 
+        OR MAY NOT HAVE ARGUEMENTS.
+        **
+
+
+
 
 
