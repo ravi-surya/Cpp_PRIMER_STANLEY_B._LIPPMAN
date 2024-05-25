@@ -719,18 +719,66 @@ SOLUTION:
  QUESTION.
  if im wrong please do let me know ,thank you...
 
+-EDIT::::so the question means grouped together in the input, so just group the input ,
+ the previous answer is already grouped.
+
 
 ******************************************************************************************
 
 Ex 1.25
 
--
+-Using the Sales_item.h header from the Web site, compile and
+ execute the bookstore program presented in this section.
 
 SOLUTION:
 
--
+-   #include <iostream>
+    #include "Sales_item.h"
+    int main()
+    {
+        Sales_item total; // variable to hold data for the next transaction
+        // read the first transaction and ensure that there are data to process
+        if (std::cin >> total)
+        {
+            Sales_item trans; // variable to hold the running sum
+            // read and process the remaining transactions
+            while (std::cin >> trans)
+            {
+                // if we’re still processing the same book
+                if (total.isbn() == trans.isbn())
+                    total += trans; // update the running total
+                else
+                {
+                    // print results for the previous book
+                    std::cout << total << std::endl;
+                    total = trans; // total now refers to the next book
+                }
+            }
+            std::cout << total << std::endl; // print the last transaction
+        }
+        else
+        {
+            // no input! warn the user
+            std::cerr << "No data?!" << std::endl;
+            return -1; // indicate failure
+        }
+        return 0;
+    }
 
+OUTPUT:
 
+    23x 4 30
+    23x 5 20
+    23x 7 90
+    23y 9 40
+    23x 16 850 53.125
+    23y 7 40
+    23y 8 90
+    23y 87 10
+    23z 8 90
+    23y 111 2230 20.0901
+
+    
 ******************************************************************************************
 
 Ex 

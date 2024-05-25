@@ -2,28 +2,31 @@
 #include "Sales_item.h"
 int main()
 {
-    Sales_item item,item1;
- 
-    if(std::cin>>item)//input the first Sales_item object
+    Sales_item total; // variable to hold data for the next transaction
+    // read the first transaction and ensure that there are data to process
+    if (std::cin >> total)
     {
-        int count =1;// have counter initialized to 1
-        while(std::cin>>item1)//input the second Sales_item object
+        Sales_item trans; // variable to hold the running sum
+        // read and process the remaining transactions
+        while (std::cin >> trans)
         {
-            if(item.isbn()== item1.isbn())
-            //check if the isbn for both are matching,if yes increament the count and add the two objects
+            // if we’re still processing the same book
+            if (total.isbn() == trans.isbn())
+                total += trans; // update the running total
+            else
             {
-                count++;
-                
-            }
-            else{
-            //else     
-                std::cout<<item1<<" occured "<< count<<" times "<<std::endl;
-                
-                item = item1;
-                count=1;
+                // print results for the previous book
+                std::cout << total << std::endl;
+                total = trans; // total now refers to the next book
             }
         }
-    }   
-return 0;
-
+        std::cout << total << std::endl; // print the last transaction
+    }
+    else
+    {
+        // no input! warn the user
+        std::cerr << "No data?!" << std::endl;
+        return -1; // indicate failure
+    }
+    return 0;
 }
