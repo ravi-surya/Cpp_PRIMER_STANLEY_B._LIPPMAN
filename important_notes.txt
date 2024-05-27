@@ -40,6 +40,9 @@
         OR MAY NOT HAVE ARGUEMENTS.
         **
 
+------ Types are fundamental to any program :They tell us what our data mean and what operations
+        we can perform on those data 
+
 
 
 
