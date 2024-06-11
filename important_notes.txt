@@ -41,9 +41,14 @@
         **
 
 ------ Types are fundamental to any program :They tell us what our data mean and what operations
-        we can perform on those data 
+        we can perform on those data.
+        TYPES DETERMINE the meaning of the data and operations in our programs.
 
+------void is also a type 
 
+------bits->byte->word
+
+------EACH BYTE HAS AN ADDRESS
 
 
 
